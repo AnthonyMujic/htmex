@@ -3,15 +3,19 @@ defmodule HTMeXTest do
   doctest HTMeX
   import HTMeX
 
-  test "greets the world" do
+  test "hx-request in the header removes root layout" do
     conn =
       Plug.Adapters.Test.Conn.conn(%Plug.Conn{}, :get, "/", %{})
-      # conn =
-      #   Plug.Conn.__struct__()
       |> Phoenix.Controller.put_root_layout(html: {AppView, :root})
       |> htmex("opts")
-      |> IO.inspect()
 
-    assert Phoenix.Controller.root_layout(conn) == {AppView, :root}
+    assert Phoenix.Controller.root_layout(conn, "html") == {AppView, :root}
+
+    conn =
+      conn
+      |> Plug.Conn.put_req_header("hx-request", "true")
+      |> htmex("opts")
+
+    assert Phoenix.Controller.root_layout(conn, "html") == false
   end
 end

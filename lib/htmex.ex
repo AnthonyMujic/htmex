@@ -28,7 +28,17 @@ defmodule HTMeX do
   ```
 
   """
+  import Plug
+
   def htmex(conn, _opts) do
-    conn
+    if(htmx_req(Plug.Conn.get_req_header(conn, "hx-request"))) do
+      Phoenix.Controller.put_root_layout(conn, html: false)
+    else
+      conn
+    end
   end
+
+  defp htmx_req([]), do: false
+  defp htmx_req(["false"]), do: false
+  defp htmx_req(["true"]), do: true
 end
