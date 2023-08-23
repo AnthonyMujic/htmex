@@ -1,6 +1,6 @@
 defmodule HTMeX do
   @moduledoc """
-  HTMeX simplifies working with the [HTMX](https://htmx.org/) javascript library.
+  HTMeX simplifies working with the [HTMX](https://htmx.org/) javascript library in a Phoenix web application.
   HTMX can be used to improve the interactivity of you web application without
   having to write much javascript. It can give your site a single page application
   feel while not requiring websockets. It achieves this by using AJAX request to
