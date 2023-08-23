@@ -41,8 +41,8 @@ defmodule Htmex.MixProject do
   defp package() do
     [
       # These are the default files included in the package
-      files: ~w(lib .formatter.exs mix.exs README* readme* LICENSE*
-                license* CHANGELOG* changelog* src),
+      files: ~w(lib .formatter.exs mix.exs README* LICENSE*
+                CHANGELOG*),
       licenses: ["MIT"],
       links: %{"GitHub" => "https://github.com/AnthonyMujic/htmex"}
     ]
