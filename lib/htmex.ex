@@ -31,7 +31,7 @@ defmodule HTMeX do
       defp deps do
         [
           # ...
-          {:htmex, "~> 0.1"}
+          {:htmex, "~> 0.1.0"}
         ]
       end
     end

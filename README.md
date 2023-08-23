@@ -33,7 +33,7 @@ the relevant HTML snippet to be stitched into the DOM in the clients browser.
     defp deps do
       [
         # ...
-        {:htmex, "~> 0.1"}
+        {:htmex, "~> 0.1.0"}
       ]
     end
   end
