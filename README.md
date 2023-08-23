@@ -39,7 +39,7 @@ the relevant HTML snippet to be stitched into the DOM in the clients browser.
   end
   ```
 
-2. Pull down the HTMeX:
+2. Pull down HTMeX:
 
 ```
 mix deps.get

@@ -37,7 +37,7 @@ defmodule HTMeX do
     end
     ```
 
-  2. Pull down the HTMeX:
+  2. Pull down HTMeX:
 
   ```
   mix deps.get
